@@ -1,0 +1,23 @@
+[package]
+name = "tis-inventory-system"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = {version = "0.6", features = ["headers"]}
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tower-http = { version = "0.4.0", features = ["cors"] }
+axum-macros = "0.3.8"
+uuid = { version = "1.5", features = ["v4", "v7", "serde", "fast-rng", "macro-diagnostics"] }
+sqlx = { version = "0.7.2", features = ["runtime-async-std-rustls", "postgres", "sqlx-postgres", "sqlx-macros", "json", "migrate", "chrono", "macros", "uuid", "any", "time"] }
+jsonwebtoken = "9.1.0"
+dotenv = "0.15.0"
+rand = "0.8.5"
+argon2 = "0.5.2"
+chrono = "0.4.31"
